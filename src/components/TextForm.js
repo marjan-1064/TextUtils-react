@@ -54,8 +54,8 @@ export default function TextForm(props) {
     
     <div className="container my-2" style={props.style}>
         <h2 style={props.style}>Your Text Summary</h2>
-        <p style={props.style}>{text.replace(/\n/g,"").split(" ").filter(value=>value!=="").length} words and {text.trim().length} chars</p>
-        <p style={props.style}>{text.replace(/\n/g,"").split(" ").filter(value=>value!=="").length*0.008} Minutes to read</p>
+        <p style={props.style}>{text.split(/\s+/).filter(value=>value!=="").length} words and {text.trim().length} chars</p>
+        <p style={props.style}>{text.split(/\s+/).filter(value=>value!=="").length*0.008} Minutes to read</p>
         <button disabled={text.length===0} className="btn btn-primary mx-2 my-2" onClick={findrepeated}>
           Find repeated word</button>
         <p style={props.style}>Most repeated word:{repeated}</p>

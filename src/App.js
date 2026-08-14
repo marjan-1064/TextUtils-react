@@ -12,10 +12,7 @@ import {
   Link
 } from "react-router-dom";
 function App() {
-  // let [navstyle, setnavstyle] = useState({
-  //   backgroundColor: "#fff",
-  //   color: "black",
-  // });
+ 
   let [alert, setalert] = useState(null);
   function showalert(message, type) {
     setalert({
@@ -41,20 +38,13 @@ function App() {
       
       showalert("Dark mode has been enabled", "Success");
       document.title = "TextUtils-Dark mode";
-      // setnavstyle({
-      //   backgroundColor: "#000",
-      //   color: "white",
-      // });
-      // document.body.style.color = "white";
+      
     } else {
       setstyle({
         color: "black",
         backgroundColor: "#40638e",
       });
-      // setnavstyle({
-      //   backgroundColor: "#fff",
-      //   color: "black",
-      // });
+      
 
       setname("Enable dark mode");
       showalert("Light mode has been enabled", "Success");
@@ -78,7 +68,7 @@ function App() {
       />
       <Alert alert={alert} />
       <div className="container my-3" style={mystyle}>
-        {/* <TextForm showalert={showalert} style={mystyle} heading="Enter text to analyze" /> */}
+       
         <Routes>
   <Route path="/about" element={<About style={mystyle}/>} />
   <Route path="/" element={<TextForm showalert={showalert} style={mystyle} heading="Enter text to analyze" />} />
