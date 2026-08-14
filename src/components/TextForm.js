@@ -41,11 +41,12 @@ export default function TextForm(props) {
           rows="8"
           value={text}
           onChange={handleonchange}
+          style={{backgroundColor:'#385373'}}
         ></textarea>
-        <button className="btn btn-primary mx-2 my-3" onClick={handleOnclick}>
+        <button  disabled={text.length===0} className="btn btn-primary mx-2 my-3" onClick={handleOnclick}>
           Convert to uppercase
         </button>
-        <button className="btn btn-primary mx-2" onClick={handleOnclickLowercase}>
+        <button   disabled={text.length===0} className="btn btn-primary mx-2" onClick={handleOnclickLowercase}>
           Convert to lowercase
         </button>
       </div>
@@ -55,11 +56,11 @@ export default function TextForm(props) {
         <h2 style={props.style}>Your Text Summary</h2>
         <p style={props.style}>{text.replace(/\n/g,"").split(" ").filter(value=>value!=="").length} words and {text.trim().length} chars</p>
         <p style={props.style}>{text.replace(/\n/g,"").split(" ").filter(value=>value!=="").length*0.008} Minutes to read</p>
-        <button className="btn btn-primary mx-2 my-2" onClick={findrepeated}>
+        <button disabled={text.length===0} className="btn btn-primary mx-2 my-2" onClick={findrepeated}>
           Find repeated word</button>
         <p style={props.style}>Most repeated word:{repeated}</p>
         <h2 style={props.style}>Preview</h2>
-        <p style={props.style}>{text}</p>
+        <p style={props.style}>{text.length>0?text:"Nothing to preview"}</p>
     </div>
     </>
   );

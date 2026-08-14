@@ -2,15 +2,15 @@ import React, { useState, useEffect } from "react";
 import "./App.css";
 import Navbar from "./components/Navbar";
 import TextForm from "./components/TextForm";
-// import About from "./components/About";
+import About from "./components/About";
 import Alert from "./components/Alert";
 import "@fortawesome/fontawesome-free/css/all.min.css";
-// import {
-//   BrowserRouter as Router,
-//   Routes,
-//   Route,
-//   Link
-// } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Link
+} from "react-router-dom";
 function App() {
   // let [navstyle, setnavstyle] = useState({
   //   backgroundColor: "#fff",
@@ -38,6 +38,7 @@ function App() {
       setstyle({ color: "white", backgroundColor: "black" });
       setname("Disable dark mode");
       document.body.style.backgroundColor = "black";
+      
       showalert("Dark mode has been enabled", "Success");
       document.title = "TextUtils-Dark mode";
       // setnavstyle({
@@ -67,7 +68,7 @@ function App() {
 
   return (
    <>
-    {/* <Router> */}
+    <Router>
       <Navbar
         style={mystyle}
         title="TextUtils"
@@ -77,14 +78,14 @@ function App() {
       />
       <Alert alert={alert} />
       <div className="container my-3" style={mystyle}>
-        <TextForm showalert={showalert} style={mystyle} heading="Enter text to analyze" />
-        {/* <Routes>
+        {/* <TextForm showalert={showalert} style={mystyle} heading="Enter text to analyze" /> */}
+        <Routes>
   <Route path="/about" element={<About style={mystyle}/>} />
   <Route path="/" element={<TextForm showalert={showalert} style={mystyle} heading="Enter text to analyze" />} />
-</Routes> */}
+</Routes>
        
       </div>
-      {/* </Router> */}
+      </Router>
     </>
   );
 }
