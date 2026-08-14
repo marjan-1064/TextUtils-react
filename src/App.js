@@ -5,15 +5,11 @@ import TextForm from "./components/TextForm";
 import About from "./components/About";
 import Alert from "./components/Alert";
 import "@fortawesome/fontawesome-free/css/all.min.css";
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  Link
-} from "react-router-dom";
+import { HashRouter , Router, Routes, Route } from "react-router-dom";
+
 function App() {
- 
   let [alert, setalert] = useState(null);
+
   function showalert(message, type) {
     setalert({
       msg: message,
@@ -34,31 +30,26 @@ function App() {
     if (mystyle.backgroundColor === "#40638e") {
       setstyle({ color: "white", backgroundColor: "black" });
       setname("Disable dark mode");
-      document.body.style.backgroundColor = "black";
-      
       showalert("Dark mode has been enabled", "Success");
       document.title = "TextUtils-Dark mode";
-      
     } else {
       setstyle({
         color: "black",
         backgroundColor: "#40638e",
       });
-      
-
       setname("Enable dark mode");
       showalert("Light mode has been enabled", "Success");
       document.title = "TextUtils-Light Mode";
     }
   };
+
   useEffect(() => {
     document.body.style.backgroundColor = mystyle.backgroundColor;
     document.body.style.color = mystyle.color;
   }, [mystyle]);
 
   return (
-   <>
-    <Router>
+    <HashRouter>
       <Navbar
         style={mystyle}
         title="TextUtils"
@@ -68,15 +59,21 @@ function App() {
       />
       <Alert alert={alert} />
       <div className="container my-3" style={mystyle}>
-       
         <Routes>
-  <Route path="/about" element={<About style={mystyle}/>} />
-  <Route path="/" element={<TextForm showalert={showalert} style={mystyle} heading="Enter text to analyze" />} />
-</Routes>
-       
+          <Route
+            path="/"
+            element={
+              <TextForm
+                showalert={showalert}
+                style={mystyle}
+                heading="Enter text to analyze"
+              />
+            }
+          />
+          <Route path="/about" element={<About style={mystyle} />} />
+        </Routes>
       </div>
-      </Router>
-    </>
+    </HashRouter>
   );
 }
 
