@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/textutils-react/static/css/main.14a7d9da.css",
-    "main.js": "/textutils-react/static/js/main.f3fff8c1.js",
+    "main.css": "/textutils-react/static/css/main.c3fe649e.css",
+    "main.js": "/textutils-react/static/js/main.0253de84.js",
     "static/js/453.ff84864b.chunk.js": "/textutils-react/static/js/453.ff84864b.chunk.js",
     "static/media/fa-solid-900.woff2": "/textutils-react/static/media/fa-solid-900.dcef2f69dbd5989a2e69.woff2",
     "static/media/fa-brands-400.woff2": "/textutils-react/static/media/fa-brands-400.41062caea457897b1d3b.woff2",
     "static/media/fa-regular-400.woff2": "/textutils-react/static/media/fa-regular-400.fa2e58edfd73d8341e07.woff2",
     "static/media/fa-v4compatibility.woff2": "/textutils-react/static/media/fa-v4compatibility.2129bf071a83c1d49732.woff2",
     "index.html": "/textutils-react/index.html",
-    "main.14a7d9da.css.map": "/textutils-react/static/css/main.14a7d9da.css.map",
-    "main.f3fff8c1.js.map": "/textutils-react/static/js/main.f3fff8c1.js.map",
+    "main.c3fe649e.css.map": "/textutils-react/static/css/main.c3fe649e.css.map",
+    "main.0253de84.js.map": "/textutils-react/static/js/main.0253de84.js.map",
     "453.ff84864b.chunk.js.map": "/textutils-react/static/js/453.ff84864b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.14a7d9da.css",
-    "static/js/main.f3fff8c1.js"
+    "static/css/main.c3fe649e.css",
+    "static/js/main.0253de84.js"
   ]
 }
